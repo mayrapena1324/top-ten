@@ -41,7 +41,11 @@
     {% endfor %}
 </div>
 <div class="container text-center add">
+{% if num_of_movies <= 10 %}
 <a href="{{url_for('add_movie') }}" class="button">Add Movie</a>
+{% else %}
+    <h2>You have a full list. Delete a movie if you would like to add a new one..️</h2>
 </div>
+{% endif %}
 
 {% endblock %}
